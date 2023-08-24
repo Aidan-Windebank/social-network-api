@@ -3,9 +3,6 @@ const { User, Thought } = require('../models');
 
 
 
-
-
-
 module.exports = {
   // Get all Thoughts
   async getThoughts(req, res) {
