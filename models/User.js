@@ -36,7 +36,14 @@ const userSchema = new Schema(
     },
     id: false,
   }
-)
+);
+
+userSchema
+  .virtual('friendCount')
+  .get(function () {
+    return this.friends.length
+});
+
 
 //create a virtual called friendCount that retrievs the length of teh users friends array field on query
 

@@ -70,9 +70,43 @@ module.exports = {
     } catch (err) {
       res.status(500).json(err);
     }
+  },
+
+  // Add reaction to user 
+  async createReaction(req, res) {
+    try {
+      const reaction = await Thought.findOneAndUpdate(
+        { _id: req.params.thoughtId },
+        { $addToSet: {reactions: req.body} },
+        { runValidators: true, new: true }
+      );
+      if (!reaction) {
+        res.status(404).json({ message: 'No reaction with this id!' });
+      }
+
+      res.json(reaction);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
+  // Delete reaction 
+  async deleteReaction(req, res) {
+    try {
+      const reaction = await Thought.findOneAndUpdate(
+        { _id: req.params.reactionId },
+        { $pull: {reactions: req.params.reactionId} },
+        { runValidators: true, new: true }
+      );
+      if (!reaction) {
+        res.status(404).json({ message: 'No reaction with this id!' });
+      }
+
+      res.json(reaction);
+    } catch (err) {
+      res.status(500).json(err);
+    }
   }
-
-
 
 
 }
