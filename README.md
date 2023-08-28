@@ -19,4 +19,4 @@ The following is a back-end API web application intended for a social media plat
 [Click Here to View GitHub Repo](https://github.com/Aidan-Windebank/social-network-api)
 
 ## Link to Screencast Video to See Application in Use
-[Click Here to View Video]()
+[Click Here to View Video](chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/fdba4b51-eb46-4492-ye43-001c0f33ece7)
