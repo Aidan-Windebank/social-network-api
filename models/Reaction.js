@@ -1,7 +1,6 @@
 const { Schema, Types } = require('mongoose');
 
 
-
 const reactionSchema = new Schema(
   {
     reactionId: {
@@ -20,17 +19,9 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date ,
       default: Date.now,
-      // use getter method to format the timestamp on query
     },
   }
 )
-
-// this will not be a model, but rather will be used as the reaction field's subdocument scheme in teh thought model.
-
-
-
-
-// const Reaction = model('reaction', reactionSchema);
 
 module.exports = reactionSchema;
 

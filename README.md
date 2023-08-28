@@ -3,7 +3,7 @@ The following is a back-end API web application intended for a social media plat
 
 ## Purpose of Assignment
 - The main focus of this assignment was to create a working back-end for a social media web application.
-- This web app is seeding with dummy users, thoughts, and reactions to test all of the back-end routing with the server. 
+- This web app is seeded with dummy users, thoughts, and reactions to test all of the back-end routing with the server. 
 - This app will have working GET routes for finding all thoughts and users, and also finding thoughts and users by their unique ID.
 - There will also be routes to create, update and delete both thoughts and users by ID.
 - Finally, there will be working routes for adding and deleting friends, and reactions with this web application.
@@ -13,7 +13,7 @@ The following is a back-end API web application intended for a social media plat
  - Please use app and comment on any errors.
 
 ## Screen Shot of Working Application
-<img src="" alt="screenshot of app being tested in Insomnia"/>
+<img src="./assets/social-api.png" alt="screenshot of app being tested in Insomnia"/>
 
 ## Link to GitHub Repository
 [Click Here to View GitHub Repo](https://github.com/Aidan-Windebank/social-network-api)

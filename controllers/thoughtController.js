@@ -2,7 +2,6 @@ const { ObjectId } = require('mongoose').Types;
 const { User, Thought } = require('../models');
 
 
-
 module.exports = {
   // Get all Thoughts
   async getThoughts(req, res) {
@@ -94,8 +93,8 @@ module.exports = {
   async deleteReaction(req, res) {
     try {
       const reaction = await Thought.findOneAndUpdate(
-        { _id: req.params.reactionId },
-        { $pull: {reactions: req.params.reactionId} },
+        { _id: req.params.thoughtId },
+        { $pull: {reactions: {reactionId: req.params.reactionId}} },
         { runValidators: true, new: true }
       );
       if (!reaction) {
@@ -107,6 +106,4 @@ module.exports = {
       res.status(500).json(err);
     }
   }
-
-
 }
